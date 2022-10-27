@@ -1,0 +1,24 @@
+In this version of Pente. You capture pieces by placing a piece so that it brackets a pair of the opponent's pieces between two of yours, either
+horizontally, vertically, or diagonally. Each captured piece is removed from the board, leaving its former position empty. That position can be played 
+on again freely by either player. It is possible to capture more than one pair on a single turn by bracketing multiple pairs. 
+A player can win the game by capturing 10 opponents stones or having 5 stones in a row horizontally, vertically, or diagonally. 
+This program also supports tic-tac-toe.
+
+To play, open main.java under "AI player."
+The main program expects three main program arguments:
+<game> <player1> <player2>
+The game argument is either “tic-tac-toe” or “pente." The player1 and player2 arguments are either "human",“ai” or “ai2”, where
+player “ai2” is a updated version of "ai" becasue it uses the transposition table (hash table). For example, running the
+game with arguments “pente human ai” will start a game where player 1 is human and
+player 2 is a computer player; running it as “pente ai ai2” will start up two computer players
+against each other.
+
+Here are the optional arguments before the game argument:
+-- help 
+Print a usage message and quit
+-- showinfo 
+Print out verbose statistics while AI players run
+-- timelimit <ms> 
+Specify the maximum time for an AI player to make its move
+(overriding the default, 3000 ms)
+For example, you can enter "-- showinfo pente ai2 human" and the heuristic of AI player will be printed.
